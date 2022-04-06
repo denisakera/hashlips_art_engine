@@ -1,5 +1,14 @@
 # Welcome to HashLips 👄
 
+this is the tapas
+```
+git clone https://github.com/denisakera/hashlips_art_engine.git
+git checkout v1.0.3_update
+git checkout -b dk/tapas
+
+```
+
+
 ![](https://github.com/HashLips/hashlips_art_engine/blob/main/logo.png)
 
 All the code in these repos was created and explained by HashLips on the main YouTube channel.
