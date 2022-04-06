@@ -1,4 +1,4 @@
-# Welcome to HashLips 👄
+# Welcome to Generated Edible Pintxos (Tapas)
 
 this is the pinxhos
 ```
@@ -11,7 +11,7 @@ git checkout -b dk/tapas
 
 ![](https://github.com/HashLips/hashlips_art_engine/blob/main/logo.png)
 
-All the code in these repos was created and explained by HashLips on the main YouTube channel.
+The repurposed the code by HashLips to generate our tapas
 
 To find out more please visit:
 
