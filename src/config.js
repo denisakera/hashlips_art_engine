@@ -1,6 +1,6 @@
 const { MODE } = require("./blendMode.js");
 const description =
-  "This is the description of your NFT project, remember to replace this";
+  "Generative pinxhos";
 const baseUri = "https://hashlips/nft";
 
 const layerConfigurations = [

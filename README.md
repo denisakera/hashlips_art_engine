@@ -1,6 +1,6 @@
 # Welcome to HashLips 👄
 
-this is the tapas
+this is the pinxhos
 ```
 git clone https://github.com/denisakera/hashlips_art_engine.git
 git checkout v1.0.3_update
