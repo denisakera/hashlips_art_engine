@@ -11,7 +11,7 @@ git checkout -b dk/tapas
 
 ![](https://github.com/HashLips/hashlips_art_engine/blob/main/logo.png)
 
-The repurposed the code by HashLips to generate our tapas
+The repurposed the code by HashLips to generate our tapasls
 
 To find out more please visit:
 
