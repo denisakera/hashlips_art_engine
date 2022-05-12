@@ -203,8 +203,8 @@ const drawElement = (_renderObject, _index, _layersLen) => {
       )
     : ctx.drawImage(
         _renderObject.loadedImage,
-        0,
-        0,
+        0, //Math.floor(Math.random() * 33),
+        0, //Math.floor(Math.random() * 33),
         format.width,
         format.height
       );
