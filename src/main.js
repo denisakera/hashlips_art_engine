@@ -171,7 +171,7 @@ const addMetadata = (_dna, _edition) => {
 const addAttributes = (_element) => {
   let selectedElement = _element.layer.selectedElement;
   attributesList.push({
-    //trait_type: _element.layer.name,
+    trait_type: _element.layer.name,
     value: selectedElement.name,
   });
 };
