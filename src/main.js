@@ -125,11 +125,29 @@ const drawBackground = () => {
   ctx.fillRect(0, 0, format.width, format.height);
 };
 
+const unCamel = (_camelString) =>
+{
+  const result = _camelString.replace(/([A-Z])/g, " $1");
+  const finalResult = result.charAt(0).toUpperCase() + result.slice(1);  
+  return finalResult.toLowerCase().trim();
+}
+const descriptionFromAttributes = (_attribs) => 
+{
+  _description = _attribs[0].value + " with " 
+  + unCamel(_attribs[1].value)  + ", " 
+  + unCamel(_attribs[2].value) + ", " 
+  + unCamel(_attribs[3].value)  + " and " 
+  +unCamel(_attribs[4].value )
+  + ".";
+  return _description
+}
+
 const addMetadata = (_dna, _edition) => {
   let dateTime = Date.now();
   let tempMetadata = {
     name: `${namePrefix} #${_edition}`,
-    description: description,
+    //description: description,
+    description: descriptionFromAttributes(attributesList),
     image: `${baseUri}/${_edition}.png`,
     dna: sha1(_dna),
     edition: _edition,
@@ -171,7 +189,7 @@ const addMetadata = (_dna, _edition) => {
 const addAttributes = (_element) => {
   let selectedElement = _element.layer.selectedElement;
   attributesList.push({
-    //trait_type: _element.layer.name,
+    trait_type: _element.layer.name,
     value: selectedElement.name,
   });
 };

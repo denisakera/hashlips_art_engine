@@ -6,7 +6,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "Edible NFTs Pintxo collection";
-const description = "First 10 Edile NFT Pintxo";
+const description = "First 375 Edible NFT Pintxo";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
@@ -24,7 +24,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 375,
     layersOrder: [
       { name: "Breads" },
       { name: "Tomato" },
@@ -71,7 +71,7 @@ const pixelFormat = {
 
 const background = {
   generate: true,
-  brightness: "50%",
+  brightness: "80%",
   static: false,
   default: "#000000",
 };
