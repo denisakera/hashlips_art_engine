@@ -73,6 +73,36 @@ const layerConfigurations = [
       { name: "Oil" },
     ],
   },
+  {
+    growEditionSizeTo: 401,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 402,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 403,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 404,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 405,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
 ];
 
 const shuffleLayerConfigurations = false;
