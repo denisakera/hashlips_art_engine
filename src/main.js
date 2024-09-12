@@ -110,18 +110,22 @@ const layersSetup = (layersOrder) => {
 const saveImage = (_editionCount) => {
   fs.writeFileSync(
     `${buildDir}/images/${_editionCount}.png`,
-    canvas.toBuffer("image/png")
+    canvas.toBuffer("image/png",{ compressionLevel: 3, filters: canvas.PNG_FILTER_NONE })
   );
 };
 
 const genColor = () => {
   let hue = Math.floor(Math.random() * 360);
   let pastel = `hsl(${hue}, 100%, ${background.brightness})`;
+
   return pastel;
 };
-
-const drawBackground = () => {
-  ctx.fillStyle = background.static ? background.default : genColor();
+const staticColor = () => {  
+  colIndex = Math.round(Math.random()*(background.default.length-1));
+  return background.default[colIndex];
+};
+  const drawBackground = () => {
+  ctx.fillStyle = background.static ? staticColor() : genColor();
   ctx.fillRect(0, 0, format.width, format.height);
 };
 
@@ -196,6 +200,7 @@ const addAttributes = (_element) => {
 
 const loadLayerImg = async (_layer) => {
   return new Promise(async (resolve) => {
+    console.log(_layer.selectedElement.path);
     const image = await loadImage(`${_layer.selectedElement.path}`);
     resolve({ layer: _layer, loadedImage: image });
   });
@@ -221,8 +226,8 @@ const drawElement = (_renderObject, _index, _layersLen) => {
       )
     : ctx.drawImage(
         _renderObject.loadedImage,
-        0, //Math.floor(Math.random() * 33),
-        0, //Math.floor(Math.random() * 33),
+        0,//Math.floor(Math.random() * 33),
+        0,//Math.floor(Math.random() * 33),
         format.width,
         format.height
       );

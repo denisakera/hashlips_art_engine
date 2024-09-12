@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Edible NFTs Pintxo collection";
-const description = "First 375 Edible NFT Pintxo";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Crypto Pintxos Collection";
+const description = "First Edible NFT Pintxos";
+const baseUri = "ipfs://NewUriToReplace"; // "ipfs://NewUriToReplace"
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,13 +24,83 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 375,
+    growEditionSizeTo: 80,
+    layersOrder: [
+      { name: "Breads" },
+      { name: "Spreads" },
+      { name: "SaladLeaves" },
+      { name: "Eggs" },
+      { name: "Oil" },
+    ],
+  },
+  {
+    growEditionSizeTo: 160,
+    layersOrder: [
+      { name: "Breads" },
+      { name: "Spreads" },
+      { name: "CookedMeats" },
+      { name: "Pickles" },
+      { name: "Herbs" },
+    ],
+  },
+  {
+    growEditionSizeTo: 240,
     layersOrder: [
       { name: "Breads" },
       { name: "Tomato" },
-      { name: "Cooked vegetables" },
-      { name: "Eggs" },
-      { name: "Herbs" },
+      { name: "Cheeses" },
+      { name: "CookedMeats" },
+      { name: "Pickles" },
+    ],
+  },
+  {
+    growEditionSizeTo: 320,
+    layersOrder: [
+      { name: "Breads" },
+      { name: "Tomato" },
+      { name: "ColdCuts" },
+      { name: "SaladLeaves" },
+      { name: "NutsSeeds" },
+    ],
+  },
+  {
+    growEditionSizeTo: 400,
+    layersOrder: [
+      { name: "Breads" },
+      { name: "Spreads" },
+      { name: "ColdCuts" },
+      { name: "SaladLeaves" },      
+      { name: "Oil" },
+    ],
+  },
+  {
+    growEditionSizeTo: 401,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 402,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 403,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 404,
+    layersOrder: [
+      { name: "Gilda" },
+    ],
+  },
+  {
+    growEditionSizeTo: 405,
+    layersOrder: [
+      { name: "Gilda" },
     ],
   },
 ];
@@ -40,8 +110,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 834,
+  height: 834,
   smoothing: false,
 };
 
@@ -71,9 +141,20 @@ const pixelFormat = {
 
 const background = {
   generate: true,
-  brightness: "80%",
-  static: false,
-  default: "#000000",
+  brightness: "70%",
+  static: true,
+  default: [
+  "#83fec6",
+  "#83f8fe",
+  "#83b1fe",
+  "#98fe83",
+  "#83feb4",
+  "#83d1fe",
+  "#fe83aa",
+  "#cc83fe",  
+  "#fe83bb",        
+  "#83c9fe"
+  ],
 };
 
 const extraMetadata = {};
